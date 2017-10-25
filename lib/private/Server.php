@@ -533,7 +533,7 @@ class Server extends ServerContainer implements IServerContainer {
 			$cacheFactory = $c->getMemCacheFactory();
 			$logger = $c->getLogger();
 			if ($cacheFactory->isAvailable()) {
-				$router = new \OC\Route\CachingRouter($cacheFactory->create('route'), $logger);
+				$router = new \OC\Route\CachingRouter($cacheFactory->createLocal('route'), $logger);
 			} else {
 				$router = new \OC\Route\Router($logger);
 			}
