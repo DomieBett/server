@@ -101,7 +101,7 @@ class SharesPluginTest extends \Test\TestCase {
 	 * @dataProvider sharesGetPropertiesDataProvider
 	 */
 	public function testGetProperties($shareTypes) {
-		$sabreNode = $this->getMockBuilder(Node::class)
+		$sabreNode = $this->getMockBuilder('\OCA\DAV\Connector\Sabre\Node')
 			->disableOriginalConstructor()
 			->getMock();
 		$sabreNode->expects($this->any())
